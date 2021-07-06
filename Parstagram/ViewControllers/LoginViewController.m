@@ -6,7 +6,9 @@
 //
 
 #import "LoginViewController.h"
-#import "ParseManager.h"
+#import "ParseUserManager.h"
+#import "SceneDelegate.h"
+
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -21,7 +23,7 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)didLogin:(id)sender {
-    [ParseManager loginUser: self.usernameField.text password: self.passwordField.text completion:^(NSError * _Nonnull error) {
+    [ParseUserManager loginUser: self.usernameField.text password: self.passwordField.text completion:^(NSError * _Nonnull error) {
         if (error != nil) {
             if (error.code == 1) {
                 // Must not be empty
@@ -43,7 +45,7 @@
     }];
 }
 - (IBAction)didSignup:(id)sender {
-    [ParseManager registerUser: self.usernameField.text password: self.passwordField.text completion:^(NSError * _Nonnull error) {
+    [ParseUserManager registerUser: self.usernameField.text password: self.passwordField.text completion:^(NSError * _Nonnull error) {
         if (error != nil) {
             if (error.code == 1) {
                 // Must not be empty
@@ -61,6 +63,23 @@
             }
         } else {
             [self performSegueWithIdentifier:@"LoginToHome" sender:nil];
+        }
+    }];
+}
+- (IBAction)didLogout:(id)sender {
+    [ParseUserManager logoutUser:^(NSError * _Nonnull error) {
+        if (error) {
+            self.alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Something went wrong, please try again" preferredStyle: UIAlertControllerStyleAlert];
+
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:(UIAlertActionStyle)UIAlertActionStyleDefault handler: nil];
+            [self.alert addAction: okAction];
+            [self presentViewController:self.alert animated:YES completion:nil];
+        } else {
+            SceneDelegate *myDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            LoginViewController *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            myDelegate.window.rootViewController = loginVC;
+
         }
     }];
 }

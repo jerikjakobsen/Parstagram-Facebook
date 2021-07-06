@@ -20,7 +20,7 @@
 		E58BC4D92694E62800380D78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4D82694E62800380D78 /* main.m */; };
 		E58BC4E32694E62800380D78 /* ParstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4E22694E62800380D78 /* ParstagramTests.m */; };
 		E58BC4EE2694E62800380D78 /* ParstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4ED2694E62800380D78 /* ParstagramUITests.m */; };
-		E5D10D9A2694FF760021191D /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D10D992694FF760021191D /* ParseManager.m */; };
+		E5A4C9AD2695145E008C90E2 /* ParseUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A4C9AC2695145E008C90E2 /* ParseUserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +70,8 @@
 		E58BC4FB2694E65000380D78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E58BC4FC2694E66E00380D78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E58BC4FD2694E6A500380D78 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		E5D10D982694FF760021191D /* ParseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseManager.h; sourceTree = "<group>"; };
-		E5D10D992694FF760021191D /* ParseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseManager.m; sourceTree = "<group>"; };
+		E5A4C9AB2695145E008C90E2 /* ParseUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseUserManager.h; sourceTree = "<group>"; };
+		E5A4C9AC2695145E008C90E2 /* ParseUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseUserManager.m; sourceTree = "<group>"; };
 		EA1810A084B0AE311AD678C8 /* Pods_Parstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB88C5B2B98164605FA5359 /* Pods-ParstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParstagramTests.release.xcconfig"; path = "Target Support Files/Pods-ParstagramTests/Pods-ParstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,8 +217,8 @@
 		E5D10D9B2694FF8A0021191D /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E5D10D982694FF760021191D /* ParseManager.h */,
-				E5D10D992694FF760021191D /* ParseManager.m */,
+				E5A4C9AB2695145E008C90E2 /* ParseUserManager.h */,
+				E5A4C9AC2695145E008C90E2 /* ParseUserManager.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -461,11 +461,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A4C9AD2695145E008C90E2 /* ParseUserManager.m in Sources */,
 				E57498BA2694FB87005E6871 /* LoginViewController.m in Sources */,
 				E58BC4C82694E62700380D78 /* AppDelegate.m in Sources */,
 				E58BC4D92694E62800380D78 /* main.m in Sources */,
 				E58BC4CB2694E62700380D78 /* SceneDelegate.m in Sources */,
-				E5D10D9A2694FF760021191D /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

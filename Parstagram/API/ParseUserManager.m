@@ -1,14 +1,14 @@
 //
-//  ParseManager.m
+//  ParseUserManager.m
 //  Parstagram
 //
 //  Created by johnjakobsen on 7/6/21.
 //
 
-#import "ParseManager.h"
+#import "ParseUserManager.h"
 #import <Parse/Parse.h>
 
-@implementation ParseManager
+@implementation ParseUserManager
 + (void) registerUser: (NSString *) username password: (NSString *) password completion: (void (^)(NSError *)) completion {
     PFUser *newUser = [PFUser user];
     newUser.username = username;
@@ -47,4 +47,16 @@
         
     }
 }
+
++ (void) logoutUser: (void (^)(NSError *)) completion {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+            if (error != nil) {
+                NSLog(@"User log out failed: %@", error.localizedDescription);
+            } else {
+                NSLog(@"User log out successful");
+            }
+        completion(error);
+    }];
+}
+
 @end
