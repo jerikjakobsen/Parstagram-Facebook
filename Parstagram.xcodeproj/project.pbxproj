@@ -11,15 +11,16 @@
 		DD653911D0D73C3CBE57B7AB /* Pods_ParstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6342A94030D9FE4E47F74E56 /* Pods_ParstagramTests.framework */; };
 		DEE6A8812E44A5D150C820EB /* Pods_Parstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1810A084B0AE311AD678C8 /* Pods_Parstagram.framework */; };
 		E57498B62694F598005E6871 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E57498B52694F598005E6871 /* Keys.plist */; };
+		E57498BA2694FB87005E6871 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57498B92694FB87005E6871 /* LoginViewController.m */; };
 		E58BC4C82694E62700380D78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4C72694E62700380D78 /* AppDelegate.m */; };
 		E58BC4CB2694E62700380D78 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4CA2694E62700380D78 /* SceneDelegate.m */; };
-		E58BC4CE2694E62700380D78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4CD2694E62700380D78 /* ViewController.m */; };
 		E58BC4D12694E62700380D78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58BC4CF2694E62700380D78 /* Main.storyboard */; };
 		E58BC4D32694E62800380D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58BC4D22694E62800380D78 /* Assets.xcassets */; };
 		E58BC4D62694E62800380D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58BC4D42694E62800380D78 /* LaunchScreen.storyboard */; };
 		E58BC4D92694E62800380D78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4D82694E62800380D78 /* main.m */; };
 		E58BC4E32694E62800380D78 /* ParstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4E22694E62800380D78 /* ParstagramTests.m */; };
 		E58BC4EE2694E62800380D78 /* ParstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4ED2694E62800380D78 /* ParstagramUITests.m */; };
+		E5D10D9A2694FF760021191D /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D10D992694FF760021191D /* ParseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +49,13 @@
 		93BA366FDE03865A14FA930F /* Pods-ParstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-ParstagramTests/Pods-ParstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95157764EFBBC067B64F7D33 /* Pods-Parstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.release.xcconfig"; path = "Target Support Files/Pods-Parstagram/Pods-Parstagram.release.xcconfig"; sourceTree = "<group>"; };
 		E57498B52694F598005E6871 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		E57498B82694FB87005E6871 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E57498B92694FB87005E6871 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E58BC4C32694E62700380D78 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58BC4C62694E62700380D78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E58BC4C72694E62700380D78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E58BC4C92694E62700380D78 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		E58BC4CA2694E62700380D78 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		E58BC4CC2694E62700380D78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E58BC4CD2694E62700380D78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E58BC4D02694E62700380D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E58BC4D22694E62800380D78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58BC4D52694E62800380D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +70,8 @@
 		E58BC4FB2694E65000380D78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E58BC4FC2694E66E00380D78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E58BC4FD2694E6A500380D78 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		E5D10D982694FF760021191D /* ParseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseManager.h; sourceTree = "<group>"; };
+		E5D10D992694FF760021191D /* ParseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseManager.m; sourceTree = "<group>"; };
 		EA1810A084B0AE311AD678C8 /* Pods_Parstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB88C5B2B98164605FA5359 /* Pods-ParstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParstagramTests.release.xcconfig"; path = "Target Support Files/Pods-ParstagramTests/Pods-ParstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +127,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E57498B72694FB67005E6871 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E57498B82694FB87005E6871 /* LoginViewController.h */,
+				E57498B92694FB87005E6871 /* LoginViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E58BC4BA2694E62700380D78 = {
 			isa = PBXGroup;
 			children = (
@@ -149,17 +161,12 @@
 		E58BC4C52694E62700380D78 /* Parstagram */ = {
 			isa = PBXGroup;
 			children = (
-				E58BC4C62694E62700380D78 /* AppDelegate.h */,
-				E58BC4C72694E62700380D78 /* AppDelegate.m */,
-				E58BC4C92694E62700380D78 /* SceneDelegate.h */,
-				E58BC4CA2694E62700380D78 /* SceneDelegate.m */,
-				E58BC4CC2694E62700380D78 /* ViewController.h */,
-				E58BC4CD2694E62700380D78 /* ViewController.m */,
-				E58BC4CF2694E62700380D78 /* Main.storyboard */,
+				E5A4C9AA26950207008C90E2 /* Storyboards */,
+				E5A4C9A9269501D9008C90E2 /* AppManagement */,
+				E5D10D9B2694FF8A0021191D /* API */,
+				E57498B72694FB67005E6871 /* ViewControllers */,
 				E58BC4D22694E62800380D78 /* Assets.xcassets */,
-				E58BC4D42694E62800380D78 /* LaunchScreen.storyboard */,
 				E58BC4D72694E62800380D78 /* Info.plist */,
-				E58BC4D82694E62800380D78 /* main.m */,
 				E58BC4FD2694E6A500380D78 /* .gitattributes */,
 				E58BC4FC2694E66E00380D78 /* .gitignore */,
 				E58BC4FB2694E65000380D78 /* README.md */,
@@ -184,6 +191,36 @@
 				E58BC4EF2694E62800380D78 /* Info.plist */,
 			);
 			path = ParstagramUITests;
+			sourceTree = "<group>";
+		};
+		E5A4C9A9269501D9008C90E2 /* AppManagement */ = {
+			isa = PBXGroup;
+			children = (
+				E58BC4D82694E62800380D78 /* main.m */,
+				E58BC4C62694E62700380D78 /* AppDelegate.h */,
+				E58BC4C72694E62700380D78 /* AppDelegate.m */,
+				E58BC4C92694E62700380D78 /* SceneDelegate.h */,
+				E58BC4CA2694E62700380D78 /* SceneDelegate.m */,
+			);
+			path = AppManagement;
+			sourceTree = "<group>";
+		};
+		E5A4C9AA26950207008C90E2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E58BC4CF2694E62700380D78 /* Main.storyboard */,
+				E58BC4D42694E62800380D78 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E5D10D9B2694FF8A0021191D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E5D10D982694FF760021191D /* ParseManager.h */,
+				E5D10D992694FF760021191D /* ParseManager.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,10 +461,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E58BC4CE2694E62700380D78 /* ViewController.m in Sources */,
+				E57498BA2694FB87005E6871 /* LoginViewController.m in Sources */,
 				E58BC4C82694E62700380D78 /* AppDelegate.m in Sources */,
 				E58BC4D92694E62800380D78 /* main.m in Sources */,
 				E58BC4CB2694E62700380D78 /* SceneDelegate.m in Sources */,
+				E5D10D9A2694FF760021191D /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
