@@ -13,9 +13,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    UITapGestureRecognizer *tappedAddComment = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSelected:)];
+    UITapGestureRecognizer *tappedAddComment = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addCommentSelected:)];
     [self.addCommentView addGestureRecognizer:tappedAddComment];
     tappedAddComment.delegate = self;
+    NSLog(@"%@",[self.addCommentView gestureRecognizers]);
+    UITapGestureRecognizer *tappedUser = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userSelected:)];
+    //[self.usernameLabel addGestureRecognizer:tappedUser];
+    [self.profilePic addGestureRecognizer: tappedUser];
+    tappedUser.delegate = self;
+    NSLog(@"%@",[self.profilePic gestureRecognizers]);
     // Initialization code
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -46,7 +52,7 @@
         [username addAttribute: NSFontAttributeName value: [UIFont boldSystemFontOfSize: 17] range:NSMakeRange(0, username.length)];
         [username appendAttributedString: caption];
         self.featuredCommentLabel.attributedText = username;
-        }
+        } else self.featuredCommentLabel.text = @"";
     }];
 }
 - (IBAction)didLike:(id)sender {
@@ -59,8 +65,13 @@
     }];
 }
 
-- (void) cellWasSelected: (UITapGestureRecognizer *) sender {
-    [self.delegate tappedCell:self.cPost];
+- (void) addCommentSelected: (UITapGestureRecognizer *) sender {
+    [self.delegate addComment:self.cPost];
+}
+
+- (void) userSelected: (UITapGestureRecognizer *) sender {
+    NSLog(@"selected");
+    [self.delegate goToUser:self.cPost.author];
 }
 @end
 

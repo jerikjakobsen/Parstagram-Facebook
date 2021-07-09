@@ -8,11 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "Post.h"
 #import <Parse/PFImageView.h>
+#import <Parse/Parse.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol PostCellDelegate
 
-- (void) tappedCell: (Post *) post;
+- (void) addComment: (Post *) post;
+- (void) goToUser: (PFUser *) user;
 
 @end
 

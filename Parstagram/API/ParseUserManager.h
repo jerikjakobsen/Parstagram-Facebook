@@ -7,11 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ParseUserManager : NSObject
-
++ (void) getUserPosts: (PFUser *) user completion: (void (^)(NSArray *, NSError *)) completion;
 + (void) registerUser: (NSString *) username
            password: (NSString *) password
            profilePic: (UIImage *) profilePic

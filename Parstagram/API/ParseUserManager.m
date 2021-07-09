@@ -61,4 +61,13 @@
     }];
 }
 
++ (void) getUserPosts: (PFUser *) user completion: (void (^)(NSArray *, NSError *)) completion {
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    query.limit = 20;
+    [query whereKey:@"author" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            completion(objects, error);
+    }];
+}
+
 @end

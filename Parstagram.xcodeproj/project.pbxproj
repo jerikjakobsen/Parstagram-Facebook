@@ -25,6 +25,8 @@
 		E58BC4D92694E62800380D78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4D82694E62800380D78 /* main.m */; };
 		E58BC4E32694E62800380D78 /* ParstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4E22694E62800380D78 /* ParstagramTests.m */; };
 		E58BC4EE2694E62800380D78 /* ParstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E58BC4ED2694E62800380D78 /* ParstagramUITests.m */; };
+		E594D3912698FC2C00DB5A4F /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E594D3902698FC2C00DB5A4F /* ProfileCell.m */; };
+		E594D3942698FC7500DB5A4F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E594D3932698FC7500DB5A4F /* ProfileViewController.m */; };
 		E5A4C9AD2695145E008C90E2 /* ParseUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A4C9AC2695145E008C90E2 /* ParseUserManager.m */; };
 		E5E1B4F92697A9670086E158 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1B4F82697A9670086E158 /* DetailViewController.m */; };
 		E5E1B4FC2697A9E70086E158 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1B4FB2697A9E70086E158 /* CommentCell.m */; };
@@ -88,6 +90,10 @@
 		E58BC4FB2694E65000380D78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E58BC4FC2694E66E00380D78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E58BC4FD2694E6A500380D78 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		E594D38F2698FC2C00DB5A4F /* ProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		E594D3902698FC2C00DB5A4F /* ProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
+		E594D3922698FC7400DB5A4F /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E594D3932698FC7500DB5A4F /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		E5A4C9AB2695145E008C90E2 /* ParseUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseUserManager.h; sourceTree = "<group>"; };
 		E5A4C9AC2695145E008C90E2 /* ParseUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseUserManager.m; sourceTree = "<group>"; };
 		E5E1B4F72697A9670086E158 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				E50C6E0B26951D73005F6F86 /* PostCell.m */,
 				E5E1B4FA2697A9E70086E158 /* CommentCell.h */,
 				E5E1B4FB2697A9E70086E158 /* CommentCell.m */,
+				E594D38F2698FC2C00DB5A4F /* ProfileCell.h */,
+				E594D3902698FC2C00DB5A4F /* ProfileCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +183,8 @@
 				E5E1B4F82697A9670086E158 /* DetailViewController.m */,
 				E5E1B4FD2697BC580086E158 /* CommentCreationViewController.h */,
 				E5E1B4FE2697BC580086E158 /* CommentCreationViewController.m */,
+				E594D3922698FC7400DB5A4F /* ProfileViewController.h */,
+				E594D3932698FC7500DB5A4F /* ProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,11 +523,13 @@
 				E57498BA2694FB87005E6871 /* LoginViewController.m in Sources */,
 				E58BC4C82694E62700380D78 /* AppDelegate.m in Sources */,
 				E50C6E1526964C51005F6F86 /* Comment.m in Sources */,
+				E594D3942698FC7500DB5A4F /* ProfileViewController.m in Sources */,
 				E58BC4D92694E62800380D78 /* main.m in Sources */,
 				E50C6E1226964525005F6F86 /* Post.m in Sources */,
 				E50C6E0C26951D73005F6F86 /* PostCell.m in Sources */,
 				E5E1B4FF2697BC580086E158 /* CommentCreationViewController.m in Sources */,
 				E5E1B4FC2697A9E70086E158 /* CommentCell.m in Sources */,
+				E594D3912698FC2C00DB5A4F /* ProfileCell.m in Sources */,
 				E5E1B4F92697A9670086E158 /* DetailViewController.m in Sources */,
 				E50C6E0F269638B5005F6F86 /* PhotosViewController.m in Sources */,
 				E58BC4CB2694E62700380D78 /* SceneDelegate.m in Sources */,

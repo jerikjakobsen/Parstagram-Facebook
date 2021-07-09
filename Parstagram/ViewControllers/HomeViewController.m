@@ -13,6 +13,7 @@
 #import "PostCell.h"
 #import "DetailViewController.h"
 #import "CommentCreationViewController.h"
+#import "ProfileViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource, PostCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
@@ -23,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.posts = [[NSArray alloc] init];
     self.homeTableView.delegate = self;
     self.homeTableView.dataSource = self;
@@ -35,7 +37,11 @@
     // Do any additional setup after loading the view.
     [self fetchPosts];
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tabBarController.navigationController setNavigationBarHidden: TRUE];
+    [self fetchPosts];
 
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toDetail"]) {
         DetailViewController *DetailVC = segue.destinationViewController;
@@ -44,9 +50,6 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [self fetchPosts];
-}
 
 - (void) fetchPosts {
     [Post getLastPosts:^(NSArray * posts) {
@@ -95,9 +98,17 @@
     NSLog(@"%@", sender);
 }
 
-- (void) tappedCell: (Post *) post {
+- (void) addComment: (Post *) post {
     [self performSegueWithIdentifier:@"HomeToCreation" sender:self];
     CommentCreationViewController *CommentVC = (CommentCreationViewController *) self.navigationController.topViewController ;
     CommentVC.postID = [post objectId];
+}
+
+- (void) goToUser:(PFUser *)user {
+    
+    [self performSegueWithIdentifier:@"HomeToProfile" sender:self];
+    ProfileViewController *profileVC = (ProfileViewController *) self.navigationController.topViewController;
+    profileVC.user = user;
+    
 }
 @end
