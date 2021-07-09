@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image;
 - (void) getLastComment: ( void (^)(Comment *) ) completion;
 - (void) getLastComments: ( void (^)(NSArray *) ) completion;
+- (void) likePost: (PFBooleanResultBlock  _Nullable) completion;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -49,6 +49,15 @@
         }
     }];
 }
+- (IBAction)didLike:(id)sender {
+
+    [self.cPost likePost:^(BOOL succeeded, NSError * _Nullable error) {
+        if (error != nil) NSLog(@"%@", error.localizedDescription);
+        [self.likeButton setSelected: YES];
+        self.likesCount.text = [NSString stringWithFormat:@"Liked by %@", self.cPost.likeCount];
+
+    }];
+}
 
 - (void) cellWasSelected: (UITapGestureRecognizer *) sender {
     [self.delegate tappedCell:self.cPost];

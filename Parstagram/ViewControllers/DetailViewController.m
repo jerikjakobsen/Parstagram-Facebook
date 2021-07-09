@@ -10,6 +10,7 @@
 #import "Post.h"
 #import "CommentCell.h"
 #import "Comment.h"
+#import "DateTools.h"
 #import "CommentCreationViewController.h"
 
 
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *currentUserImageView;
 @property (weak, nonatomic) IBOutlet UITableView *commentsTableView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property NSArray *comments;
 @end
 
@@ -32,6 +35,7 @@
     self.commentsTableView.delegate = self;
     self.commentsTableView.dataSource = self;
     if (self.post != nil) {
+        self.dateLabel.text = self.post.createdAt.timeAgoSinceNow;
     NSMutableAttributedString *username = [[NSMutableAttributedString alloc] initWithString: [self.post.author.username stringByAppendingString: @" "] ];
     NSMutableAttributedString *caption = [[NSMutableAttributedString alloc] initWithString:self.post.caption];
     [username addAttribute: NSFontAttributeName value: [UIFont boldSystemFontOfSize: 17] range:NSMakeRange(0, username.length)];
@@ -45,7 +49,7 @@
     [self.currentUserImageView loadInBackground];
     self.postImageView.file = self.post.image;
     [self.postImageView loadInBackground];
-        [self fetchComments];
+    [self fetchComments];
     }
 }
 
@@ -80,6 +84,12 @@
 - (IBAction)didTapCreateComment:(id)sender {
     [self performSegueWithIdentifier: @"DetailToCreation" sender:self];
     
+}
+- (IBAction)didLike:(id)sender {
+    [self.post likePost:^(BOOL succeeded, NSError * _Nullable error) {
+        [self.likeButton setSelected: TRUE];
+        self.likeCountLabel.text = [NSString stringWithFormat:@"Liked by %@", self.post.likeCount];
+    }];
 }
 
 @end
