@@ -7,12 +7,14 @@
 
 #import "ParseUserManager.h"
 #import <Parse/Parse.h>
+#import "Post.h"
 
 @implementation ParseUserManager
-+ (void) registerUser: (NSString *) username password: (NSString *) password completion: (void (^)(NSError *)) completion {
++ (void) registerUser: (NSString *) username password: (NSString *) password profilePic: (UIImage *) profilePic completion: (void (^)(NSError *)) completion {
     PFUser *newUser = [PFUser user];
     newUser.username = username;
     newUser.password = password;
+    newUser[@"profile_image"] = [Post getPFFileFromImage: profilePic];
     if (username.length > 0 && password.length >0) {
 
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {

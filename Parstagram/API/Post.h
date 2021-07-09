@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "Comment.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *commentCount;
 
 + (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion;
-
++ (void) getLastPosts: ( void (^)(NSArray *) ) completion;
++ (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image;
+- (void) getLastComment: ( void (^)(Comment *) ) completion;
+- (void) getLastComments: ( void (^)(NSArray *) ) completion;
 @end
 
 NS_ASSUME_NONNULL_END

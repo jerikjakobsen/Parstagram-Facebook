@@ -6,11 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ParseUserManager : NSObject
-+ (void) registerUser: (NSString *) username password: (NSString *) password completion: (void (^)(NSError *)) completion;
+
++ (void) registerUser: (NSString *) username
+           password: (NSString *) password
+           profilePic: (UIImage *) profilePic
+           completion: (void (^)(NSError *)) completion;
+
 + (void) loginUser: (NSString *) username password: (NSString *) password completion: (void (^)(NSError *)) completion;
 + (void) logoutUser: (void (^)(NSError *)) completion;
 @end
