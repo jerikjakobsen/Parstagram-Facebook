@@ -192,6 +192,7 @@
 		E58BC4BA2694E62700380D78 = {
 			isa = PBXGroup;
 			children = (
+				E58BC4FB2694E65000380D78 /* README.md */,
 				E58BC4C52694E62700380D78 /* Parstagram */,
 				E58BC4E12694E62800380D78 /* ParstagramTests */,
 				E58BC4EC2694E62800380D78 /* ParstagramUITests */,
@@ -223,7 +224,6 @@
 				E58BC4D72694E62800380D78 /* Info.plist */,
 				E58BC4FD2694E6A500380D78 /* .gitattributes */,
 				E58BC4FC2694E66E00380D78 /* .gitignore */,
-				E58BC4FB2694E65000380D78 /* README.md */,
 				E57498B52694F598005E6871 /* Keys.plist */,
 			);
 			path = Parstagram;
